@@ -34,14 +34,14 @@ export default function MobileNavbar() {
     const openImpact = () => {
         setImpactOpen((prevState) => !prevState);
         setDiscoverOpen(false);
-    };
+    };  
 
     return (
-        <header className='sm:hidden'>
-            <div className="w-full h-[72px] items-center flex ml-6 gap-51">
-                <img src={CokeCompanyLogo} alt="Coke Company Logo" className='items-center' />
+        <header className='lg:hidden'>
+            <div className="w-full h-[72px] items-center flex ml-6  ">
+                <img src={CokeCompanyLogo} alt="Coke Company Logo"/>
 
-                <Button className="min-w-10 w-10 h-10 " onPress={() => handleOpen(size)}>
+                <Button className="absolute right-0 top-0 mr-6 mt-2" onPress={() => handleOpen(size)}>
                     <FiMenu className="absolute" size={24} />
                 </Button>
 

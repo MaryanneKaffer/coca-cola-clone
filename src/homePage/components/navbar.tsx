@@ -1,5 +1,5 @@
-import MobileNavbar from "./navbar/mobileNavbar";
-import PcNavbar from "./navbar/pcNavbar";
+import MobileNavbar from "./navbarComponent/mobileNavbar";
+import PcNavbar from "./navbarComponent/pcNavbar";
 export default function Navbar(){
     return(
        <>
