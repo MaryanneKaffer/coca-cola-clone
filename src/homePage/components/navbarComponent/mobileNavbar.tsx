@@ -1,23 +1,16 @@
-import { Button } from '@heroui/react';
+import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure } from "@heroui/react"
 import CokeCompanyLogo from '../../../assets/cokeCompanyLogo.svg';
-import { FiMenu } from "react-icons/fi";
-import { FiX } from "react-icons/fi";
-import React from "react";
-import {
-    Modal,
-    ModalContent,
-    ModalHeader,
-    ModalBody,
-    ModalFooter,
-    useDisclosure,
-} from "@heroui/react";
 import { Listbox, ListboxItem } from "@heroui/react";
-import { SlLocationPin } from "react-icons/sl";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
-
+import { SlLocationPin } from "react-icons/sl";
+import { FiMenu } from "react-icons/fi";
+import { Button } from '@heroui/react';
+import { FiX } from "react-icons/fi";
+import React from "react";
 
 export default function MobileNavbar() {
+
     const { isOpen, onOpen, onClose } = useDisclosure();
     const [size, setSize] = React.useState("md");
     const [isImpactOpen, setImpactOpen] = React.useState(false);
@@ -34,14 +27,14 @@ export default function MobileNavbar() {
     const openImpact = () => {
         setImpactOpen((prevState) => !prevState);
         setDiscoverOpen(false);
-    };  
+    };
 
     return (
         <header className='lg:hidden'>
             <div className="w-full h-[72px] items-center flex ml-6  ">
-                <img src={CokeCompanyLogo} alt="Coke Company Logo"/>
+                <img src={CokeCompanyLogo} alt="Coke Company Logo" />
 
-                <Button className="absolute right-0 top-0 mr-6 mt-2" onPress={() => handleOpen(size)}>
+                <Button className="absolute -right-6 top-[11px] mr-6 mt-2" onPress={() => handleOpen(size)}>
                     <FiMenu className="absolute" size={24} />
                 </Button>
 
@@ -53,7 +46,7 @@ export default function MobileNavbar() {
                             </Button>
                         </ModalHeader>
                         <ModalBody >
-                            <div className='grid ml-1 text-[27px] gap-3 font-semibold' style={{ fontFamily: 'KometaBold, Sans-Serif', transform: 'scaley(0.9)' }}>
+                            <div className='grid ml-1 text-[27px] gap-3 font-bold scale-y-90'>
 
                                 <a href='' className='mt-6'> Brands </a>
 
@@ -77,9 +70,9 @@ export default function MobileNavbar() {
                             </div>
                             <div className=''>
                                 <p className='mt-14 tracking-wider text-md'> Want a personalized experience and access to exclusive content?</p>
-                                <div className='flex gap-3 mt-6 text-lg'>
-                                    <Button className='bg-black text-white  rounded-3xl w-1/2 max-w-[250px] font-bold'  > Log in </Button>
-                                    <Button className='border-black border-2 text-black  rounded-3xl w-1/2 max-w-[250px] font-bold' > Sign Up </Button>
+                                <div className='flex gap-3 mt-6 text-lg scale-y-90'>
+                                    <Button className='bg-black text-white  rounded-3xl w-1/2 max-w-[250px] font-bold h-12'  > Log in </Button>
+                                    <Button className='border-black border-2 text-black  rounded-4xl w-1/2 max-w-[250px] font-bold h-12' > Sign Up </Button>
                                 </div>
                             </div>
                             <div className="bg-gray-300 h-px w-full m-6"></div>

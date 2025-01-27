@@ -1,10 +1,10 @@
-import FeaturesMobile from "./featuresComponent/featuresMobile";
+import MobileFeatures from "./featuresComponent/mobileFeatures";
 import PcFeatures from "./featuresComponent/pcFeatures";
 
 export default function Features() {
   return (
     <>
-      <FeaturesMobile />
+      <MobileFeatures />
       <PcFeatures />
     </>
   )

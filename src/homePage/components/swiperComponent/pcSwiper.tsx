@@ -1,12 +1,12 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
+import Swiper1 from '../../../assets/swiper1pc.webp';
+import Swiper2 from '../../../assets/swiper2pc.webp';
 import { Button } from "@heroui/react";
-import Swiper1 from '../../../assets/swiper1mobile.webp';
-import Swiper2 from '../../../assets/swiper2mobile.jpg';
 
-export default function MobileSwiper() {
+export default function PcSwiper() {
     return (
-        <div className="mx-auto px-4 lg:hidden mt-7">
+        <div className="max-w-[1350px] max-h-[2000px] mx-auto px-4 hidden lg:block mt-7">
             <Swiper
                 modules={[Pagination]}
                 slidesPerView={1}
@@ -18,10 +18,11 @@ export default function MobileSwiper() {
                     }
                 }}
                 loop={true}
-                className="relative shadow-lg "
+                className="h-[680px]"
             >
                 <SwiperSlide>
-                    <div className="transition-all duration-500 transform hover:scale-110">
+                    <div className="flex items-center ">
+
                         <img
                             src={Swiper1}
                             alt="Coca Cola Merch"
@@ -31,10 +32,10 @@ export default function MobileSwiper() {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <div className="flex text-white rounded-4xl relative transition-all duration-500 transform hover:scale-110">
-                        <div className="absolute left-0 right-0 top-0 text-center p-10">
-                            <h2 className="text-4xl font-bold mb-4">Take A Sip Down Memory Lane!</h2>
-                            <p className="text-xl mb-7 leading-6 mx-4">
+                    <div className="flex items-center justify-between bg-[#6d0a0a] text-white h-[620px] rounded-4xl">
+                        <div className="absolute m-25 w-150 scale-y-95">
+                            <h2 className="text-5xl font-bold mb-4">Take A Sip Down Memory Lane!</h2>
+                            <p className="text-xl mb-6 leading-6">
                                 Celebrate generations of Coca-Cola products with some vintage and timeless gear. Enter today for your chance to win some awesome limited merch!
                             </p>
                             <Button className="bg-white text-black font-bold py-3 px-6 rounded-full shadow-md w-70 text-lg p-6">
