@@ -9,7 +9,7 @@ export default function PcNavbar() {
     const [isImpactOpen, setIsImpactOpen] = useState(false);
 
     return (
-        <header className='hidden lg:block '>
+        <nav className='hidden lg:block '>
             <div className="max-w-[1440px] mx-auto px-21 h-[80px] flex items-center gap-12 font-bold text-md ">
                 <img src={CokeCompanyLogo} alt="Coke Company Logo" className='items-center' />
 
@@ -68,6 +68,6 @@ export default function PcNavbar() {
                     </Button>
                 </Tooltip>
             </div>
-        </header>
+        </nav>
     );
 }

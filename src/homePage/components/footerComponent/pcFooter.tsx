@@ -1,81 +1,44 @@
 import CokeCompanyLogo from '../../../assets/cokeCompanyLogoWhite.svg'
-import { BsTwitterX } from "react-icons/bs";
-import { FaInstagram } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
+import { LEGAL_DATA } from '../../../config/legalData.ts';
+import { VISIT_DATA } from '../../../config/visitData.ts';
+import { HELP_DATA } from '../../../config/helpData.ts';
 import { FaFacebookF } from "react-icons/fa6";
-import { LEGAL_DATA } from '../../../config/data.ts';
+import SocialMedia from './socialMedia.tsx';
+import { FaInstagram } from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
+import { FaYoutube } from "react-icons/fa";
+import { PcNavigation } from './section';
 
-export default function PcFooter() {   
-
+export default function PcFooter() {
     return (
-        <div className="hidden lg:block bg-black w-full absolute mt-15">
-            <div className="mx-[42vh] relative">
-                <img src={CokeCompanyLogo} alt="cokeCompanyLogo" className="mt-13 mb-10" />
+        <section className="hidden lg:block bg-black w-full absolute mt-15">
+            <header className="mx-[20%]">
+                <a href={import.meta.env.VITE_LINK_PORTFOLIO} target="_blank" className='flex w-[249px]'>
+                    <img src={CokeCompanyLogo} alt="cokeCompanyLogo" className="mt-13 mb-10" />
+                </a>
                 <div className="bg-white h-px w-full "></div>
-                <div className='text-md font-bold scale-y-95'>
-                    <div className='flex gap-6'>
-                        <div className="w-[200px]">
-                            <p className="flex items-center justify-between text-white mt-10 text-xs opacity-80"> HELP </p>
-                            <div className='text-white leading-9 font-bold mt-3 grid'>
-                                <a href='#'> FAQs </a>
-                                <a href='#'> Sitemap </a>
-                                <a href='#'> Contact Us </a>
-                                <a href='#'> Order Status </a>
-                                <a href='#'> Shipping </a>
-                            </div>
-                        </div>
-                        <div className="w-[250px]">
-                            <a className="flex items-center justify-between text-white mt-10 text-xs opacity-80"> Shop & Visit </a>
-                            <div className='text-white leading-9 font-bold mt-3 grid'>
-                                <a href='#'> Coca-Cola Store Online </a>
-                                <a href='#'> Coca-Cola Int'l Store Online </a>
-                                <a href='#'> Coca-Cola Store Atlanta </a>
-                                <a href='#'> Coca-Cola Store Orlando </a>
-                                <a href='#'> Coca-Cola Store Las Vegas </a>
-                                <a href='#'> World of Coca-Cola Attraction </a>
-                                <a href='#'> Android App </a>
-                                <a href='#'> Apple App </a>
-                            </div>
-                        </div>
-                        <div className="w-[250px]">
-                            <a className="flex items-center justify-between text-white mt-10 text-xs opacity-80"> Legal </a>
-                            <div className='text-white leading-9 font-bold mt-3 grid'>
-                                {LEGAL_DATA.map((data, index) => (
-                                    <a key={index} href={data.link} target="_blank" rel="noopener noreferrer" > {data.name} </a>
-                                ))}
-                            </div>
-                        </div>
-                        <div className='flex gap-4 ml-50 mt-10'>
-                            <div className="flex justify-center items-center w-8 h-8 bg-transparent border-2 border-white rounded-full">
-                                <a href='#'>
-                                    <BsTwitterX size={15} className='text-white' />
-                                </a>
-                            </div>
-                            <div className="flex justify-center items-center w-8 h-8 bg-transparent border-2 border-white rounded-full">
-                                <a href='#'>
-                                    <FaInstagram size={18} className='text-white' />
-                                </a>
-                            </div>
-                            <div className="flex justify-center items-center w-8 h-8 bg-transparent border-2 border-white rounded-full">
-                                <a href='#'>
-                                    <FaYoutube size={16} className='text-white' />
-                                </a>
-                            </div>
-                            <div className="flex justify-center items-center w-8 h-8 bg-transparent border-2 border-white rounded-full">
-                                <a href='#'>
-                                    <FaFacebookF size={15} className='text-white' />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+            </header>
+
+            <div className="flex justify-between items-start mx-[20%]">
+                <div className='flex gap-6'>
+                    <PcNavigation data={HELP_DATA} sectionName={'HELP'} />
+                    <PcNavigation data={VISIT_DATA} sectionName={'SHOP & VISIT'} />
+                    <PcNavigation data={LEGAL_DATA} sectionName={'LEGAL'} />
                 </div>
-
-                <div className="bg-white h-px w-full mt-10 mb-6"></div>
-
-
+                <div className='flex gap-4 mt-10'>
+                    <SocialMedia Name='X' Icon={BsTwitterX} />
+                    <SocialMedia Name='Instagram' Icon={FaInstagram} />
+                    <SocialMedia Name='Youtube' Icon={FaYoutube} />
+                    <SocialMedia Name='Facebook' Icon={FaFacebookF} />
+                </div>
             </div>
-            <p className='text-white text-sm mt-6 mb-15 flex mx-[42vh] justify-end'> © 2025 <a href='#' className="underline"> The Coca-Cola Company </a> . All rights reserved. </p>
-        </div>
 
+            <footer className='mx-[20%]'>
+                <div className="bg-white h-px w-full mt-10 mb-6"></div>
+                <p className='text-white text-sm mt-6 mb-15 flex justify-end'>
+                    © 2025&nbsp; <a href={import.meta.env.VITE_LINK_PORTFOLIO} target="_blank" className="underline"> The Coca-Cola Company </a> . All rights reserved.
+                </p>
+            </footer>
+        </section>
     )
 }
