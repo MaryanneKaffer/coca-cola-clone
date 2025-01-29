@@ -9,7 +9,7 @@ interface SocialMediaIconsProps {
 export default function SocialMedia({ Icon, Name }: SocialMediaIconsProps) {
     return (
         <div className="flex justify-center items-center w-8 h-8 bg-transparent border-2 border-white rounded-full">
-            <a href={import.meta.env.VITE_LINK_PORTFOLIO} target="_blank">
+            <a href={import.meta.env.VITE_LINK_PORTFOLIO} target="_blank" aria-label={Name}>
                 <Icon size={18} alt={Name} className='text-white' />
             </a>
         </div>

@@ -30,11 +30,11 @@ export default function MobileNavbar() {
     };
 
     return (
-        <header className='lg:hidden'>
+        <nav className='lg:hidden'>
             <div className="w-full h-[72px] items-center flex ml-6  ">
                 <img src={CokeCompanyLogo} alt="Coke Company Logo" />
 
-                <Button className="absolute -right-6 top-[11px] mr-6 mt-2" onPress={() => handleOpen(size)}>
+                <Button className="absolute -right-6 top-[11px] mr-6 mt-2" id='Menu' type='button' onPress={() => handleOpen(size)}>
                     <FiMenu className="absolute" size={24} />
                 </Button>
 
@@ -85,6 +85,6 @@ export default function MobileNavbar() {
                     </ModalContent>
                 </Modal>
             </div>
-        </header>
+        </nav>
     );
 }

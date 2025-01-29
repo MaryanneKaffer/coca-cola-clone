@@ -10,8 +10,10 @@ export default function MobileMore() {
     const fourthCardData = MoreFromCocaCola[3];
     const fifthCardData = MoreFromCocaCola[4];
 
+    
+
     return (
-        <div className="lg:hidden justify-center">
+        <section className="lg:hidden justify-center">
             <p className="text-center text-3xl font-bold mt-1 mb-14 scale-y-95">More from Coca‑Cola®</p>
             <Swiper
                 modules={[Pagination]}
@@ -27,7 +29,7 @@ export default function MobileMore() {
                 className="relative shadow-lg pb-10"
             >
                 <SwiperSlide>
-                    <MobileContentCard
+                    <MobileContentCard 
                         image={firstCardData.image}
                         link={firstCardData.link}
                         title={firstCardData.title || ""}
@@ -37,7 +39,7 @@ export default function MobileMore() {
                     />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <MobileContentCard
+                    <MobileContentCard 
                         image={secondCardData.image}
                         link={secondCardData.link}
                         title={secondCardData.title || ""}
@@ -57,7 +59,7 @@ export default function MobileMore() {
                     />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <MobileContentCard
+                    <MobileContentCard 
                         image={fourthCardData.image}
                         link={fourthCardData.link}
                         title={fourthCardData.title || ""}
@@ -67,7 +69,7 @@ export default function MobileMore() {
                     />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <MobileContentCard
+                    <MobileContentCard 
                         image={fifthCardData.image}
                         link={fifthCardData.link}
                         title={fifthCardData.title || ""}
@@ -77,6 +79,6 @@ export default function MobileMore() {
                     />
                 </SwiperSlide>
             </Swiper>
-        </div>
+        </section>
     )
 }

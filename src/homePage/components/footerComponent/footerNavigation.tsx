@@ -33,7 +33,7 @@ export function MobileNavigation({ data, sectionName }: SectionProps) {
 
     return (
         <>
-            <a onClick={open} className="flex items-center justify-between w-full text-white mt-10 cursor-pointer"> {sectionName} {isOpen ? <IoIosArrowDown size={30} /> : <IoIosArrowForward size={30} />} </a>
+            <p onClick={open} className="flex items-center justify-between w-full text-white mt-10 cursor-pointer"> {sectionName} {isOpen ? <IoIosArrowDown size={30} /> : <IoIosArrowForward size={30} />} </p>
             {isOpen && (
                 <Listbox className="text-lg ml-5 text-white leading-4 font-bold mt-3">
                     {data.map((item, index) => (

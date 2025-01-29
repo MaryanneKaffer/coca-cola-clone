@@ -7,7 +7,7 @@ import SocialMedia from './socialMedia.tsx';
 import { FaInstagram } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { FaYoutube } from "react-icons/fa";
-import { PcNavigation } from './section';
+import { PcNavigation } from './footerNavigation.tsx';
 
 export default function PcFooter() {
     return (

@@ -7,7 +7,7 @@ import { FaInstagram } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { FaYoutube } from "react-icons/fa";
 import { StoreApps } from './socialMedia';
-import { MobileNavigation } from './section';
+import { MobileNavigation } from './footerNavigation';
 import SocialMedia from './socialMedia';
 
 export default function MobileFooter() {

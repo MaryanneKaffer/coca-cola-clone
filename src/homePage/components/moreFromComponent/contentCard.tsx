@@ -1,5 +1,6 @@
-import { Divider } from "@heroui/divider";
-import { Card, CardHeader, CardBody, CardFooter, Link } from "@heroui/react";
+import { useState, useEffect } from "react";
+import { Card, CardHeader, CardBody, CardFooter } from "@heroui/react";
+import { Skeleton } from "@heroui/skeleton";
 import { IoArrowForward } from "react-icons/io5";
 
 interface CardProps {
@@ -11,29 +12,64 @@ interface CardProps {
     name: string;
 }
 
-export function MobileContentCard({ image, link, title, description, actionLink, name }: CardProps) {
+export function MobileContentCard({ image, link, title, description, actionLink, name, }: CardProps) {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        if (image && title && description && actionLink) {
+            setLoading(false);
+        }
+    }, [image, title, description, actionLink]);
+
     return (
         <div className="flex justify-center">
-            <Card className="w-[90%] rounded-2xl">
-                <CardHeader className="flex gap-3">
-                    <img
-                        src={image}
-                        className='rounded-t-2xl'
-                        alt={name}
-                    />
-                </CardHeader>
-                <Divider />
-                <CardBody className='px-7 scale-y-98'>
-                    <h1 className='text-2xl font-bold mb-2'> {title}</h1>
-                    <h2 className='text-xl'> {description}</h2>
-                </CardBody>
-                <Divider />
-                <CardFooter>
-                    <Link href={link} className='font-bold underline mb-20 mt-24 ml-4 text-lg'>
-                        {actionLink} <IoArrowForward className='ml-2' size={16} />
-                    </Link>
-                </CardFooter>
-            </Card>
+            <a href={link} target="_blank" rel="noopener noreferrer">
+                <Card className="w-[90%] rounded-2xl">
+                    <CardHeader>
+                        {loading ? (<Skeleton className="w-full h-[180px] rounded-t-2xl" />) : (<img src={image} className="rounded-t-2xl" alt={name || "Image description"} />)}
+                    </CardHeader>
+
+                    <CardBody className="px-7 h-[250px]">
+                        <h1 className="text-2xl font-bold mb-2"> {loading ? <Skeleton className="w-3/4 h-6" /> : title} </h1>
+                        <h2 className="text-xl"> {loading ? <Skeleton className="w-full h-4 mt-2" /> : description} </h2>
+                    </CardBody>
+
+                    <CardFooter className="flex justify-start px-7 pb-6 mb-12"> {loading ? (<Skeleton className="w-[150px] h-6" />) : (
+                        <span className="font-bold underline text-lg flex items-center">
+                            {actionLink} <IoArrowForward className="ml-2 mt-1" size={16} />
+                        </span>)}
+                    </CardFooter>
+                </Card>
+            </a>
+        </div>
+    );
+}
+
+export function PcContentCard({ image, link, title, description, actionLink, name, }: CardProps) {
+    return (
+        <div className="flex justify-center ">
+            <a href={link} target="_blank" rel="noopener noreferrer">
+                <Card className="rounded-2xl">
+                    <CardHeader className="flex">
+                        <img
+                            src={image}
+                            className='rounded-t-2xl'
+                            alt={name || "Image description"}
+                        />
+                    </CardHeader>
+
+                    <CardBody className='px-7 scale-y-98 h-[280px]'>
+                        <h1 className='text-2xl font-bold mb-2'> {title} </h1>
+                        <h2 className='text-xl'> {description} </h2>
+                    </CardBody>
+
+                    <CardFooter className="flex justify-start px-7 pb-6 mb-12">
+                        <span className='font-bold underline text-lg flex items-center'>
+                            {actionLink} <IoArrowForward className='ml-2 mt-1' size={16} />
+                        </span>
+                    </CardFooter>
+                </Card>
+            </a>
         </div>
     )
 }

@@ -43,5 +43,6 @@ export const MoreFromCocaCola = [
     name: "Drink Up image",
     title: "Drink up what we’ve dreamed up!",
     description: "Coca‑Cola Freestyle gives you the freedom to explore, pour, and enjoy your perfect drinks.",
+    actionLink: "Explore and Pour",
   },
 ];

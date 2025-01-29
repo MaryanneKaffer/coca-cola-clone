@@ -21,11 +21,13 @@ export default function MobileExplore() {
                     <MobileBrandCard key={index} link={data.link} image={data.image} />
                 ))}
             </div>
-            <a href={import.meta.env.VITE_LINK_PORTFOLIO} target="_blank" className="w-[90%]">
-                <Button className="border-black border-2 text-black text-lg rounded-3xl font-bold px-4 py-2 w-[90%] mx-5 mt-8">
-                    View All
-                </Button>
-            </a>
+            <div className="flex justify-center mt-10">
+                <a href={import.meta.env.VITE_LINK_PORTFOLIO} target="_blank" className="w-[90%] relative  h-10">
+                    <Button className="border-black border-2 text-black text-lg rounded-3xl font-bold px-4 py-2 w-full mt-8 absolute -top-8" id="View All Brands">
+                        View All
+                    </Button>
+                </a>
+            </div>
         </section>
     );
 }

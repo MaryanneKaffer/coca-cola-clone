@@ -63,9 +63,9 @@ export default function PcNavbar() {
                     </Listbox>
                 )} placement={"bottom-end"}>
 
-                    <Button className="ml-auto">
+                    <div className="ml-auto cursor-pointer">
                         <GoPerson size={25} className='flex items-center gap-1' />
-                    </Button>
+                    </div>
                 </Tooltip>
             </div>
         </nav>

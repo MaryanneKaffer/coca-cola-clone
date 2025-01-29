@@ -7,11 +7,12 @@ interface BrandCardProps {
 }
 
 export function PcBrandCard({ image, link, name }: BrandCardProps) {
+    const buttonId = name ? `Go to ${name} site` : "Go to brand site";
     return (
         <div className="flex justify-center ">
             <a href={link} target="_blank">
-                <Button className="h-[15vw] w-[15vw] rounded-lg p-5 mx-3 shadow-md shadow-gray-300 cursor-pointer">
-                    <img src={image} alt={name} />
+                <Button className="h-[15vw] w-[15vw] rounded-lg p-5 mx-3 shadow-md shadow-gray-300 cursor-pointer" id={buttonId} type="button" >
+                    <img src={image} alt={name || "Brand image"} />
                 </Button>
             </a>
         </div>
@@ -19,11 +20,12 @@ export function PcBrandCard({ image, link, name }: BrandCardProps) {
 }
 
 export function MobileBrandCard({ image, link, name }: BrandCardProps)  {
+    const buttonId = name ? `Go to ${name} site` : "Go to brand site";
     return (
         <div className="flex justify-center">
             <a href={link} target="_blank">
-                <Button className="h-[40vw] w-[40vw] rounded-lg p-5 mx-3 shadow-md shadow-gray-300">
-                    <img src={image} alt={name} />
+                <Button className="h-[40vw] w-[40vw] rounded-lg p-5 mx-3 shadow-md shadow-gray-300" id={buttonId} type="button" >
+                    <img src={image} alt={name || "Brand image"} />
                 </Button>
             </a>
         </div>
