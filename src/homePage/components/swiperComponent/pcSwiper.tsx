@@ -4,8 +4,6 @@ import { PcSlideContent } from './slideContent';
 import { SwiperDataPc } from '../../../config/swiperData';
 
 export default function PcSwiper() {
-    const firstSlideData = SwiperDataPc[0];
-    const secondSlideData = SwiperDataPc[1];
     return (
         <section className="max-w-[1350px] max-h-[2000px] mx-auto px-4 hidden lg:block mt-7">
             <Swiper
@@ -20,27 +18,18 @@ export default function PcSwiper() {
                 }}
                 className="h-[680px]"
             >
-                <SwiperSlide>
-                    <PcSlideContent
-                        image={firstSlideData.image}
-                        link={firstSlideData.link}
-                        title={firstSlideData.title || ""}
-                        description={firstSlideData.description || ""}
-                        button={firstSlideData.button || ""}
-                        name={firstSlideData.name}
-                    />
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <PcSlideContent
-                        image={secondSlideData.image}
-                        link={secondSlideData.link}
-                        title={secondSlideData.title || ""}
-                        description={secondSlideData.description || ""}
-                        button={secondSlideData.button || ""}
-                        name={secondSlideData.name}
-                    />
-                </SwiperSlide>
+                {SwiperDataPc.map((data, index) => (
+                    <SwiperSlide key={index}>
+                        <PcSlideContent
+                            image={data.image}
+                            link={data.link}
+                            title={data.title || ""}
+                            description={data.description || ""}
+                            button={data.button || ""}
+                            name={data.name}
+                        />
+                    </SwiperSlide>
+                ))}
             </Swiper>
         </section>
     );

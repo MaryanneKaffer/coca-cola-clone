@@ -31,12 +31,10 @@ export default function MobileNavbar() {
 
     return (
         <nav className='lg:hidden'>
-            <div className="w-full h-[72px] items-center flex ml-6  ">
+            <div className="h-[72px] items-center flex ml-6  ">
                 <img src={CokeCompanyLogo} alt="Coke Company Logo" />
 
-                <Button className="absolute -right-6 top-[11px] mr-6 mt-2" id='Menu' type='button' onPress={() => handleOpen(size)}>
-                    <FiMenu className="absolute" size={24} />
-                </Button>
+                <FiMenu className="ml-auto flex justify-end mt-2 mr-10" id='Menu' type='button' onClick={() => handleOpen(size)} size={24} />
 
                 <Modal className='bg-white flex items-center justify-center fixed inset-0 font-KometaBold' isOpen={isOpen} size={"full"} onClose={onClose} hideCloseButton={true} >
                     <ModalContent>
@@ -48,16 +46,7 @@ export default function MobileNavbar() {
                         <ModalBody >
                             <div className='grid ml-1 text-[27px] gap-3 font-bold scale-y-90'>
 
-                                <a href='' className='mt-6'> Brands </a>
 
-                                <a onClick={openDiscover} className="flex items-center justify-between w-full"> Discover {isDiscoverOpen ? <IoIosArrowDown size={21} /> : <IoIosArrowForward size={21} />} </a>
-                                {isDiscoverOpen && (
-                                    <Listbox className='text-lg ml-3' >
-                                        <ListboxItem href=''> +one app </ListboxItem>
-                                        <ListboxItem href=''> World Of Coca-Cola Attraction </ListboxItem>
-                                        <ListboxItem href=''> Offerings </ListboxItem>
-                                    </Listbox>
-                                )}
 
                                 <a onClick={openImpact} className="flex items-center justify-between w-full"> Impact  {isImpactOpen ? <IoIosArrowDown size={21} /> : <IoIosArrowForward size={21} />}</a>
                                 {isImpactOpen && (

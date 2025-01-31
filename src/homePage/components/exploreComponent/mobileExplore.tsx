@@ -4,7 +4,7 @@ import { Button } from "@heroui/react";
 
 export default function MobileExplore() {
     return (
-        <section className="lg:hidden">
+        <section>
             <p className="text-center text-3xl font-bold mt-5 mb-14 scale-y-95"> Explore our Brands </p>
             <div className="flex justify-center">
                 {Brand.slice(0, 2).map((data, index) => (

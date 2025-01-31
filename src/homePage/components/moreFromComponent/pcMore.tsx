@@ -4,11 +4,6 @@ import { PcContentCard } from './contentCard';
 import { MoreFromCocaCola } from "../../../config/moreFromCocaColaData.ts";
 
 export default function PcMore() {
-    const firstCardData = MoreFromCocaCola[0];
-    const secondCardData = MoreFromCocaCola[1];
-    const thirdCardData = MoreFromCocaCola[2];
-    const fourthCardData = MoreFromCocaCola[3];
-    const fifthCardData = MoreFromCocaCola[4];
 
     return (
         <section className="hidden lg:block w-full">
@@ -24,62 +19,20 @@ export default function PcMore() {
                     }
                 }}
                 loop={true}
-                className="relative shadow-lg pb-10 max-w-[70%]"
+                className="relative pb-10 max-w-[70%]"
             >
-                <SwiperSlide >
-                    <PcContentCard
-                        image={firstCardData.image}
-                        link={firstCardData.link}
-                        title={firstCardData.title || ""}
-                        description={firstCardData.description || ""}
-                        actionLink={firstCardData.actionLink || ""}
-                        name={firstCardData.name}
-                    />
-                </SwiperSlide>
-
-                <SwiperSlide >
-                    <PcContentCard
-                        image={secondCardData.image}
-                        link={secondCardData.link}
-                        title={secondCardData.title || ""}
-                        description={secondCardData.description || ""}
-                        actionLink={secondCardData.actionLink || ""}
-                        name={secondCardData.name}
-                    />
-                </SwiperSlide>
-
-                <SwiperSlide >
-                    <PcContentCard
-                        image={thirdCardData.image}
-                        link={thirdCardData.link}
-                        title={thirdCardData.title || ""}
-                        description={thirdCardData.description || ""}
-                        actionLink={thirdCardData.actionLink || ""}
-                        name={thirdCardData.name}
-                    />
-                </SwiperSlide>
-
-                <SwiperSlide >
-                    <PcContentCard
-                        image={fourthCardData.image}
-                        link={fourthCardData.link}
-                        title={fourthCardData.title || ""}
-                        description={fourthCardData.description || ""}
-                        actionLink={fourthCardData.actionLink || ""}
-                        name={fourthCardData.name}
-                    />
-                </SwiperSlide>
-
-                <SwiperSlide >
-                    <PcContentCard
-                        image={fifthCardData.image}
-                        link={fifthCardData.link}
-                        title={fifthCardData.title || ""}
-                        description={fifthCardData.description || ""}
-                        actionLink={fifthCardData.actionLink || ""}
-                        name={fifthCardData.name}
-                    />
-                </SwiperSlide>
+                {MoreFromCocaCola.map((data, index) => (
+                    <SwiperSlide key={index}>
+                        <PcContentCard
+                            image={data.image}
+                            link={data.link}
+                            title={data.title || ""}
+                            description={data.description || ""}
+                            actionLink={data.actionLink || ""}
+                            name={data.name}
+                        />
+                    </SwiperSlide>
+                ))}
             </Swiper>
         </section>
     )

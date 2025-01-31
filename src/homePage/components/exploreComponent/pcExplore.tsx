@@ -4,7 +4,7 @@ import { Brand } from "../../../config/brandsData.ts";
 
 export default function PcExplore() {
     return (
-        <section className="hidden lg:block">
+        <section>
             <p className="text-center text-4xl font-bold mt-10 mb-14 scale-y-95"> Explore our Brands </p>
             <div className="flex justify-center">
                 {Brand.slice(0, 3).map((data, index) => (
