@@ -1,8 +1,8 @@
 import { IoIosArrowDown, IoIosArrowForward } from 'react-icons/io';
 import CokeCompanyLogo from '../../../assets/cokeCompanyLogo.svg';
 import { Tooltip, Listbox, ListboxItem } from "@heroui/react";
-import discoverData from "../../../config/discoverData.ts";
-import { ImpactData } from "../../../config/impactData";
+import discoverData from "../../../config/data/discoverData.ts";
+import { ImpactData } from "../../../config/data/impactData.ts";
 import { useState } from 'react';
 import Profile from "./profile";
 

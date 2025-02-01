@@ -1,4 +1,4 @@
-import { SwiperDataPc } from '../../../config/swiperData';
+import { SwiperDataPc } from '../../../config/data/swiperData';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { PcSlideContent } from './slideContent';
 import { Pagination } from 'swiper/modules';

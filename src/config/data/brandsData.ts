@@ -1,9 +1,9 @@
-import SmartWater from "../assets/smartWater.webp";
-import MinuteMaid from "../assets/minuteMaid.webp";
-import CokeDiet from "../assets/cokeDiet.webp";
-import CocaCola from "../assets/cocaCola.webp";
-import Sprite from "../assets/sprite.webp";
-import Fanta from "../assets/fanta.webp";
+import SmartWater from "../../assets/smartWater.webp";
+import MinuteMaid from "../../assets/minuteMaid.webp";
+import CokeDiet from "../../assets/cokeDiet.webp";
+import CocaCola from "../../assets/cocaCola.webp";
+import Sprite from "../../assets/sprite.webp";
+import Fanta from "../../assets/fanta.webp";
 
 export const Brand = [
   {

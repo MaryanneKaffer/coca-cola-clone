@@ -1,4 +1,4 @@
-import { SwiperDataMobile } from '../../../config/swiperData';
+import { SwiperDataMobile } from '../../../config/data/swiperData';
 import { MobileSlideContent } from './slideContent';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';

@@ -1,4 +1,4 @@
-import { MoreFromCocaCola } from "../../../config/moreFromCocaColaData.ts";
+import { MoreFromCocaCola } from "../../../config/data/moreFromCocaColaData.ts";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import { Skeleton } from '@heroui/react';

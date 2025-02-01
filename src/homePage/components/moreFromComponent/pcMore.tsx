@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
-import { MoreFromCocaCola } from "../../../config/moreFromCocaColaData.ts";
+import { MoreFromCocaCola } from "../../../config/data/moreFromCocaColaData.ts";
 import { Skeleton } from '@heroui/react';
 import { Suspense } from 'react';
 import React from 'react';

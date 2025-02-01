@@ -1,8 +1,8 @@
-import WorldOfCocaCola from '../assets/worldOfCocaCola.webp';
-import RefreshingFilms from '../assets/refreshingFilms.webp';
-import Vending from '../assets/vending.webp';
-import DrinkUp from '../assets/drinkUp.webp';
-import plusOneApp from '../assets/+oneApp.webp';
+import WorldOfCocaCola from '../../assets/worldOfCocaCola.webp';
+import RefreshingFilms from '../../assets/refreshingFilms.webp';
+import Vending from '../../assets/vending.webp';
+import DrinkUp from '../../assets/drinkUp.webp';
+import plusOneApp from '../../assets/+oneApp.webp';
 
 export const MoreFromCocaCola = [
   {

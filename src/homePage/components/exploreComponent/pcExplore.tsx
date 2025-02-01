@@ -1,4 +1,4 @@
-import { Brand } from "../../../config/brandsData.ts";
+import { Brand } from "../../../config/data/brandsData.ts";
 import { PcBrandCard } from "./brandCard";
 import { Button } from "@heroui/react";
 

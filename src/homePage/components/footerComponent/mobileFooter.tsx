@@ -1,8 +1,8 @@
 import CokeCompanyLogo from '../../../assets/cokeCompanyLogoWhite.svg';
-import { VISIT_DATA } from '../../../config/visitData';
-import { LEGAL_DATA } from '../../../config/legalData';
+import { VISIT_DATA } from '../../../config/data/visitData';
+import { LEGAL_DATA } from '../../../config/data/legalData';
 import { MobileNavigation } from './footerNavigation';
-import { HELP_DATA } from '../../../config/helpData';
+import { HELP_DATA } from '../../../config/data/helpData';
 import { FaFacebookF } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";

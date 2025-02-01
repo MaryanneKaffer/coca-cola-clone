@@ -1,4 +1,4 @@
-import { FeaturesData } from "../../../config/featuresData";
+import { FeaturesData } from "../../../config/data/featuresData";
 import { MobileFeaturesCard } from "./featuresCard";
 import { Skeleton } from "@heroui/react";
 import { Suspense } from "react";

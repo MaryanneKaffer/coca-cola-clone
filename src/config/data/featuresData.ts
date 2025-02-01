@@ -1,6 +1,6 @@
-import Feature1 from "../assets/feature1.webp"
-import Feature2 from "../assets/feature2.webp"
-import Feature3 from "../assets/feature3.webp"
+import Feature1 from "../../assets/feature1.webp"
+import Feature2 from "../../assets/feature2.webp"
+import Feature3 from "../../assets/feature3.webp"
 
 export const FeaturesData = [
   {

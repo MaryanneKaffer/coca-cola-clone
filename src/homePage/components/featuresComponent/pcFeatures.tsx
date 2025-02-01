@@ -1,5 +1,5 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { FeaturesData } from "../../../config/featuresData";
+import { FeaturesData } from "../../../config/data/featuresData";
 import { PcFeaturesCard } from "./featuresCard";
 import { Card, Skeleton } from "@heroui/react";
 import { Suspense } from "react";
