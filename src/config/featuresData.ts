@@ -8,7 +8,7 @@ export const FeaturesData = [
     name: "Vitaminwater", 
     title: "imagine an even better looking vitaminwater. crazy, right?",
     description: "we’re getting a makeover and adding two fun flavors to the family. you’re gonna love it, so be the first to award your thirst.",
-    button: "Learn  More",
+    button: "Learn More about the new flavors",
     image: Feature1
   },
   {

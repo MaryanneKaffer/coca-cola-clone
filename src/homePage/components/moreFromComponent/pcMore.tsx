@@ -6,7 +6,7 @@ import { Suspense } from 'react';
 import React from 'react';
 
 export default function PcMore() {
-    const PcContentCard = React.lazy(() => import("./contentCard").then(module => ({ default: module.PcContentCard }))); 
+    const PcContentCard = React.lazy(() => import("./contentCard").then(module => ({ default: module.PcContentCard })));
     return (
         <section className="hidden lg:block w-full">
             <p className="text-center text-4xl font-bold -mt-100 mb-14 scale-y-95">More from Coca‑Cola®</p>
@@ -35,7 +35,6 @@ export default function PcMore() {
                             />
                         </Suspense>
                     </SwiperSlide>
-
                 ))}
             </Swiper>
         </section>

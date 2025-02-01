@@ -1,11 +1,13 @@
+import { SwiperDataMobile } from '../../../config/swiperData';
+import { MobileSlideContent } from './slideContent';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
-import { MobileSlideContent } from './slideContent';
-import { SwiperDataMobile } from '../../../config/swiperData';
+import { Skeleton } from '@heroui/react';
+import { Suspense } from 'react';
 
 export default function MobileSwiper() {
     return (
-        <section className="mx-auto px-4 lg:hidden mt-7">
+        <section className="lg:hidden mt-7">
             <Swiper
                 modules={[Pagination]}
                 slidesPerView={1}
@@ -16,18 +18,20 @@ export default function MobileSwiper() {
                         return `<span class="${className} custom-bullet" style="background-color: transparent; border: 2px solid black; border-radius: 50%; margin: 0 4px; transition: all 0.3s ease; background-color: black; width: 20px; height: 20px; border: none;"></span>`;
                     }
                 }}
-                className="relative shadow-lg w-[90%] mx-auto"
+                className="w-[80%]"
             >
                 {SwiperDataMobile.map((data, index) => (
                     <SwiperSlide key={index}>
-                        <MobileSlideContent
-                            image={data.image}
-                            link={data.link}
-                            title={data.title || ""}
-                            description={data.description || ""}
-                            button={data.button || ""}
-                            name={data.name}
-                        />
+                        <Suspense fallback={<Skeleton className="w-full h-full rounded-2xl" />}>
+                            <MobileSlideContent
+                                image={data.image}
+                                link={data.link}
+                                title={data.title || ""}
+                                description={data.description || ""}
+                                button={data.button || ""}
+                                name={data.name}
+                            />
+                        </Suspense>
                     </SwiperSlide>
                 ))}
             </Swiper>

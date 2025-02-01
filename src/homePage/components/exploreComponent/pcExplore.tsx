@@ -1,6 +1,6 @@
+import { Brand } from "../../../config/brandsData.ts";
 import { PcBrandCard } from "./brandCard";
 import { Button } from "@heroui/react";
-import { Brand } from "../../../config/brandsData.ts";
 
 export default function PcExplore() {
     return (

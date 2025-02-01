@@ -1,5 +1,5 @@
-import { MobileBrandCard } from "./brandCard";
 import { Brand } from "../../../config/brandsData.ts";
+import { MobileBrandCard } from "./brandCard";
 import { Button } from "@heroui/react";
 
 export default function MobileExplore() {

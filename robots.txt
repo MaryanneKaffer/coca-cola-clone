@@ -2,4 +2,7 @@ User-agent: Googlebot
 Disallow: /private/
 
 User-agent: *
-Disallow: /restricted/
+Disallow: /private/
+
+Allow: /
+Sitemap: http://localhost:3000/sitemap.xml

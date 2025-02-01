@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "node server.js"
   },
   "dependencies": {
     "@heroui/divider": "^2.2.6",
@@ -16,7 +17,11 @@
     "@heroui/theme": "^2.4.6",
     "@tailwindcss/postcss": "^4.0.0",
     "@tailwindcss/vite": "^4.0.0",
+    "compression": "^1.7.5",
+    "express": "^4.21.2",
+    "express-compression": "^1.0.2",
     "framer-motion": "^12.0.3",
+    "nginx": "^1.0.8",
     "postcss": "^8.5.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -24,7 +29,7 @@
     "react-lazy-load-image-component": "^1.6.3",
     "react-lazyload": "^3.2.1",
     "swiper": "^11.2.1",
-    "tailwindcss": "^4.0.0"
+    "tailwindcss": "^4.0.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",

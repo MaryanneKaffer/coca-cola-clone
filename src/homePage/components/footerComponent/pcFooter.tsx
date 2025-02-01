@@ -1,13 +1,13 @@
-import CokeCompanyLogo from '../../../assets/cokeCompanyLogoWhite.svg'
+import CokeCompanyLogo from '../../../assets/cokeCompanyLogoWhite.svg';
 import { LEGAL_DATA } from '../../../config/legalData.ts';
 import { VISIT_DATA } from '../../../config/visitData.ts';
 import { HELP_DATA } from '../../../config/helpData.ts';
+import { PcNavigation } from './footerNavigation.tsx';
 import { FaFacebookF } from "react-icons/fa6";
-import SocialMedia from './socialMedia.tsx';
 import { FaInstagram } from "react-icons/fa";
+import SocialMedia from './socialMedia.tsx';
 import { BsTwitterX } from "react-icons/bs";
 import { FaYoutube } from "react-icons/fa";
-import { PcNavigation } from './footerNavigation.tsx';
 
 export default function PcFooter() {
     return (

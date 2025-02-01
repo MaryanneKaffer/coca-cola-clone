@@ -1,17 +1,16 @@
 import CokeCompanyLogo from '../../../assets/cokeCompanyLogoWhite.svg';
 import { VISIT_DATA } from '../../../config/visitData';
 import { LEGAL_DATA } from '../../../config/legalData';
+import { MobileNavigation } from './footerNavigation';
 import { HELP_DATA } from '../../../config/helpData';
 import { FaFacebookF } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { FaYoutube } from "react-icons/fa";
 import { StoreApps } from './socialMedia';
-import { MobileNavigation } from './footerNavigation';
 import SocialMedia from './socialMedia';
 
 export default function MobileFooter() {
-
     return (
         <section className="lg:hidden bg-black w-full absolute mt-15">
             <header className="mx-5">

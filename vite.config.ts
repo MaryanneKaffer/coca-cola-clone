@@ -7,11 +7,10 @@ export default defineConfig({
   plugins: [
     react(), 
     tailwindcss(),
-    viteCompression({
-      algorithm: 'gzip', 
-      ext: '.gz',
-      threshold: 1024, 
-      filter: /\.(js|mjs|json|css|html|svg|ts)$/,
-    }),
+    viteCompression({ algorithm: 'gzip' }),
    ],
+   build: {
+    sourcemap: true,  
+  },
 })
+  

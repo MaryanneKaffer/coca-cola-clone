@@ -19,7 +19,7 @@ export const MoreFromCocaCola = [
     name: "World Of CocaCola image",
     title: "Discover the World of Coca‑Cola",
     description: "Journey through the storied history of the iconic beverage brand, interact with a variety of exhibits, and sample beverages from around the world. Oh, and chill with the world's bubbliest polar bear.",
-    actionLink: "Learn More",
+    actionLink: "Learn More about Coca-Cola",
   },
   {
     link: import.meta.env.VITE_LINK_PORTFOLIO || "",

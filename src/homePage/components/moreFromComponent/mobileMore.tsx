@@ -1,8 +1,8 @@
+import { MoreFromCocaCola } from "../../../config/moreFromCocaColaData.ts";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
-import { MoreFromCocaCola } from "../../../config/moreFromCocaColaData.ts";
-import React, { Suspense } from 'react';
 import { Skeleton } from '@heroui/react';
+import React, { Suspense } from 'react';
 
 export default function MobileMore() {
     const MobileContentCard = React.lazy(() => import("./contentCard").then(module => ({ default: module.PcContentCard })));

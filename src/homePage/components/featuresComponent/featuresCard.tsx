@@ -1,5 +1,5 @@
-import { CardBody, Button, Card } from "@heroui/react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { CardBody, Button, Card } from "@heroui/react";
 
 interface FeaturesProps {
     link: string;
@@ -17,8 +17,8 @@ export function PcFeaturesCard({ link, title, description, button }: FeaturesPro
                 <p className="text-4xl font-bold mb-5"> {title} </p>
                 <p className="text-xl leading-5"> {description} </p>
             </div>
-            <a href={link} target="_blank">
-                <Button className="border-black border-2 text-black text-lg rounded-3xl font-bold px-4 py-2 mt-auto w-82">
+            <a href={link} target="_blank" aria-label="Go to the product page">
+                <Button className="border-black border-2 text-black text-lg rounded-3xl font-bold px-4 py-2 mt-auto w-82 cursor-pointer">
                     {button}
                 </Button>
             </a>
