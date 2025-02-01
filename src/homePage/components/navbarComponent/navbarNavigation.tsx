@@ -1,5 +1,5 @@
-import { DiscoverData } from "../../../config/discoverData.ts"
-import { ImpactData } from "../../../config/impactData.ts"
+import { DiscoverData } from '../../../config/discoverData';
+import { ImpactData } from "../../../config/impactData"
 import { Listbox, ListboxItem } from "@heroui/react";
 
 export function NavbarDiscover() {
