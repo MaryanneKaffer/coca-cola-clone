@@ -1,4 +1,4 @@
-import { DiscoverData } from '../../../config/discoverData';
+import DiscoverData from '../../../config/discoverData';
 import { ImpactData } from "../../../config/impactData"
 import { Listbox, ListboxItem } from "@heroui/react";
 

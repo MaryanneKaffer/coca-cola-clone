@@ -17,4 +17,4 @@ export const DiscoverData: item[] = [
         name: "Offerings",
     },
 ]
-
+export default DiscoverData;
