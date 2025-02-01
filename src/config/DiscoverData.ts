@@ -3,7 +3,7 @@ interface item {
     link: string;
 }
 
-export const Discover: item[] = [
+export const DiscoverData: item[] = [
     {
         link: import.meta.env.VITE_LINK_PORTFOLIO || "",
         name: "+one app",

@@ -10,6 +10,10 @@
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "jsx": "react-jsx",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "baseUrl": "./src", 
+    "paths": {
+      "@config/*": ["config/*"]
+    }
   }
 }
