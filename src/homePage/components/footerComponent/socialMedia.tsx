@@ -20,10 +20,10 @@ export function StoreApps() {
     return (
         <div className="flex gap-3">
             <a href={import.meta.env.VITE_LINK_PORTFOLIO} target="_blank">
-                <img src={AppStore} alt='App Store Link' className='h-[5vh] w-[18vh]' />
+                <img src={AppStore} alt='App Store Link' className='h-[5vh] w-[18vh] object-contain' />
             </a>
             <a href={import.meta.env.VITE_LINK_PORTFOLIO} target="_blank">
-                <img src={GooglePlay} alt='Google Play Link' className='h-[5vh] w-[18vh]' />
+                <img src={GooglePlay} alt='Google Play Link' className='h-[5vh] w-[18vh] object-contain' />
             </a>
         </div>
     )

@@ -3,20 +3,22 @@ import MobileFooter from "./footerComponent/mobileFooter";
 import PcFooter from "./footerComponent/pcFooter";
 
 export default function Footer() {
-    const [isMobile, setIsMobile] = useState(false);
-  
-    useEffect(() => {
-      const mediaQuery = window.matchMedia("(max-width: 1024px)");
-      setIsMobile(mediaQuery.matches);
-  
-      const handleResize = () => setIsMobile(mediaQuery.matches);
-      mediaQuery.addEventListener("change", handleResize);
-  
-      return () => mediaQuery.removeEventListener("change", handleResize);
-    }, []);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []); 
+
   return (
     <>
-      {isMobile ? <MobileFooter/> :  <PcFooter />}
+      {isMobile ? <MobileFooter /> : <PcFooter />}
     </>
-  )
+  );
 }

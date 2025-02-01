@@ -1,6 +1,7 @@
 import { Card } from "@heroui/react";
 import { PcFeaturesCard } from "./featuresCard";
 import { FeaturesData } from "../../../config/featuresData";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function PcFeatures() {
     return (
@@ -9,7 +10,7 @@ export default function PcFeatures() {
 
             <div className="justify-center flex max-h-[840px]">
                 <div className="relative mr-310 mt-30">
-                    <img src={FeaturesData[0].image} alt={FeaturesData[0].name} className="h-[500px] rounded-2xl ml-260" />
+                    <LazyLoadImage effect="blur" src={FeaturesData[0].image} alt={FeaturesData[0].name} className="h-[500px] rounded-2xl ml-260" />
                     <Card className="relative -top-143 left-135 mx-6 bg-white rounded-2xl shadow-gray-300 shadow-2xl w-135 h-132 p-12">
                         <PcFeaturesCard link={FeaturesData[0].link} title={FeaturesData[0].title} description={FeaturesData[0].description} button={FeaturesData[0].button} />
                     </Card>
@@ -17,7 +18,7 @@ export default function PcFeatures() {
             </div>
             <div className="justify-center flex max-h-[840px]">
                 <div className="relative mr-110 -mt-5">
-                    <img src={FeaturesData[1].image} alt={FeaturesData[1].name} className="h-[500px] rounded-2xl" />
+                    <LazyLoadImage effect="blur" src={FeaturesData[1].image} alt={FeaturesData[1].name} className="h-[500px] rounded-2xl" />
                     <Card className="relative -top-143 left-130 mx-6 bg-white rounded-2xl shadow-gray-300 shadow-2xl w-135 h-132 p-12">
                         <PcFeaturesCard link={FeaturesData[1].link} title={FeaturesData[1].title} description={FeaturesData[1].description} button={FeaturesData[1].button} />
                     </Card>
@@ -25,7 +26,7 @@ export default function PcFeatures() {
             </div>
             <div className="justify-center flex gap-10">
                 <div className="relative mr-310 -mt-35">
-                    <img src={FeaturesData[2].image} alt={FeaturesData[2].name} className="h-[500px] rounded-2xl ml-260" />
+                    <LazyLoadImage effect="blur" src={FeaturesData[2].image} alt={FeaturesData[2].name} className="h-[500px] rounded-2xl ml-260" />
                     <Card className="relative -top-134 left-130 mx-6 bg-white rounded-2xl shadow-gray-300 shadow-2xl w-140 h-132 p-12">
                         <PcFeaturesCard link={FeaturesData[2].link} title={FeaturesData[2].title} description={FeaturesData[2].description} button={FeaturesData[2].button} />
                     </Card>
