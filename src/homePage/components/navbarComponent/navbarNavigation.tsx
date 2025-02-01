@@ -1,4 +1,4 @@
-import DiscoverData from "../../../config/discoverData.ts";
+import discoverData from "../../../config/discoverData.ts";
 import { ImpactData } from "../../../config/impactData"
 import { Listbox, ListboxItem } from "@heroui/react";
 
@@ -7,9 +7,9 @@ export function NavbarDiscover() {
     <>
       <div className='grid ml-1 text-[27px] gap-3 font-bold scale-y-90'>
         <Listbox className="text-lg ml-3 mt-2">
-          {DiscoverData.map((item: any, index: number) => (
+          {discoverData.map((item: any, index: number) => (
             <ListboxItem href={item.link} key={index}>
-              {item.name}
+              {item.title}
             </ListboxItem>
           ))}
         </Listbox>

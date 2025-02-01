@@ -1,20 +1,21 @@
-interface item {
-    name: string;
+export interface DiscoverItem {
+    title: string;
     link: string;
 }
 
-export const DiscoverData: item[] = [
+export const discoverData: DiscoverItem[] = [
     {
-        link: import.meta.env.VITE_LINK_PORTFOLIO || "",
-        name: "+one app",
+        title: "+one app",
+        link: import.meta.env.VITE_LINK_PORTFOLIO || ""
     },
     {
-        link: import.meta.env.VITE_LINK_PORTFOLIO || "",
-        name: "World Of Coca-Cola Attraction",
+        title: "World of Coca-Cola Attraction",
+        link: import.meta.env.VITE_LINK_PORTFOLIO || ""
     },
     {
-        link: import.meta.env.VITE_LINK_PORTFOLIO || "",
-        name: "Offerings",
-    },
-]
-export default DiscoverData;
+        title: "Offerings",
+        link: import.meta.env.VITE_LINK_PORTFOLIO || ""
+    }
+];
+
+export default discoverData;

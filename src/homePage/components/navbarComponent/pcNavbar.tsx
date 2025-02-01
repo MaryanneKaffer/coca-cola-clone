@@ -1,7 +1,7 @@
 import { IoIosArrowDown, IoIosArrowForward } from 'react-icons/io';
 import CokeCompanyLogo from '../../../assets/cokeCompanyLogo.svg';
 import { Tooltip, Listbox, ListboxItem } from "@heroui/react";
-import DiscoverData from "../../../config/discoverData.ts";
+import discoverData from "../../../config/discoverData.ts";
 import { ImpactData } from "../../../config/impactData";
 import { useState } from 'react';
 import Profile from "./profile";
@@ -21,10 +21,10 @@ export default function PcNavbar() {
 
                 <Tooltip color="secondary" content={(
                     <Listbox className='text-sm leading-3 bg-white w-[280px] h-[120px] p-6 mt-4'>
-                        {DiscoverData.map((item: any, index: number) => (
+                        {discoverData.map((item: any, index: number) => (
                             <ListboxItem key={index}>
                                 <a href={item.link} target="_blank" rel="noopener noreferrer">
-                                    {item.name}
+                                    {item.title}
                                 </a>
                             </ListboxItem>
                         ))}
