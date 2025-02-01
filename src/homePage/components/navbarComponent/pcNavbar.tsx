@@ -21,7 +21,7 @@ export default function PcNavbar() {
 
                 <Tooltip color="secondary" content={(
                     <Listbox className='text-sm leading-3 bg-white w-[280px] h-[120px] p-6 mt-4'>
-                        {Discover.map((item, index) => (
+                        {Discover.map((item: any, index: number) => (
                             <ListboxItem key={index}>
                                 <a href={item.link} target="_blank" rel="noopener noreferrer">
                                     {item.name}
@@ -40,7 +40,7 @@ export default function PcNavbar() {
 
                 <Tooltip color="secondary" content={(
                     <Listbox className='text-sm leading-3 bg-white w-[180px] h-[100px] p-6 mt-4'>
-                        {Impact.map((item, index) => (
+                        {Impact.map((item: any, index: number) => (
                             <ListboxItem key={index}>
                                 <a href={item.link} target="_blank" rel="noopener noreferrer">
                                     {item.name}
