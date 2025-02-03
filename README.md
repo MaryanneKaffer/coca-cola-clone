@@ -60,4 +60,4 @@ Feel free to explore the code and provide feedback! 😊
 
 # 🍹 Experience the Refreshing Clone! 🍹
 
-- coca-cola-clone-delta.vercel.app 
+- https://coca-cola-clone-delta.vercel.app 
