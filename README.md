@@ -38,7 +38,7 @@ Feel free to explore the code and provide feedback! 😊
 
    ```bash
    git clone https://github.com/MaryanneKaffer/coca-cola-clone.git
-   cd CocaCola-Clone
+   cd cocacolasite
    ```
 
 2. **Install dependencies:**
