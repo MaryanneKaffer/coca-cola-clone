@@ -37,7 +37,7 @@ Feel free to explore the code and provide feedback! 😊
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/CocaCola-Clone.git
+   git clone https://github.com/MaryanneKaffer/coca-cola-clone.git
    cd CocaCola-Clone
    ```
 
