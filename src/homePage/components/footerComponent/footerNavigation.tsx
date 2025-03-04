@@ -1,6 +1,7 @@
-import { IoIosArrowDown, IoIosArrowForward } from 'react-icons/io';
+import { IoIosArrowForward } from 'react-icons/io';
 import { Listbox, ListboxItem } from "@heroui/react";
 import React from "react";
+import { motion } from 'framer-motion';
 
 interface SectionProps {
     data: { name: string; link: string }[];
@@ -33,17 +34,30 @@ export function MobileNavigation({ data, sectionName }: SectionProps) {
 
     return (
         <>
-            <p onClick={open} className="flex items-center justify-between w-full text-white mt-10 cursor-pointer"> {sectionName} {isOpen ? <IoIosArrowDown size={30} /> : <IoIosArrowForward size={30} />} </p>
+            <p onClick={open} className="flex items-center justify-between w-full text-white mt-10 cursor-pointer"> {sectionName}
+                <motion.div
+                    animate={{ rotate: isOpen ? 90 : 0 }}
+                    transition={{ duration: 0.2, ease: "easeInOut" }}
+                >
+                    <IoIosArrowForward size={30} />
+                </motion.div> </p>
             {isOpen && (
-                <Listbox className="text-lg ml-5 text-white leading-4 font-bold mt-3">
-                    {data.map((item: any, index: number) => (
-                        <ListboxItem key={index}>
-                            <a href={item.link} target="_blank" rel="noopener noreferrer">
-                                {item.name}
-                            </a>
-                        </ListboxItem>
-                    ))}
-                </Listbox>
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: isOpen ? 1 : 0, y: isOpen ? 0 : -20 }}
+                    transition={{ duration: 0.2, ease: "easeInOut" }}
+                    className="overflow-hidden mt-2"
+                >
+                    <Listbox className="text-lg ml-5 text-white leading-4 font-bold mt-3">
+                        {data.map((item: any, index: number) => (
+                            <ListboxItem key={index}>
+                                <a href={item.link} target="_blank" rel="noopener noreferrer">
+                                    {item.name}
+                                </a>
+                            </ListboxItem>
+                        ))}
+                    </Listbox>
+                </motion.div>
             )}
         </>
     );

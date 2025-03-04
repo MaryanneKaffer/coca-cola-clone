@@ -1,9 +1,10 @@
 import { ModalContent, ModalHeader, Button, ModalBody } from "@heroui/react";
-import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
 import { NavbarDiscover, NavbarImpact } from "./navbarNavigation";
 import { SlLocationPin } from "react-icons/sl";
 import { FiX } from "react-icons/fi";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function MobileModal({ onClose }: { onClose: () => void }) {
     const [isImpactOpen, setImpactOpen] = useState(false);
@@ -26,13 +27,25 @@ export default function MobileModal({ onClose }: { onClose: () => void }) {
                 <div className="font-bold text-3xl">
                     <a href={import.meta.env.VITE_LINK_PORTFOLIO}><p className="mt-6"> Brands </p></a>
                     <p onClick={toggleDiscover} className="flex items-center justify-between w-full cursor-pointer mt-4" >
-                        Discover {isDiscoverOpen ? <IoIosArrowDown size={21} /> : <IoIosArrowForward size={21} />}
+                        Discover
+                        <motion.div
+                            animate={{ rotate: isDiscoverOpen ? 90 : 0 }}
+                            transition={{ duration: 0.2, ease: "easeInOut" }}
+                        >
+                            <IoIosArrowForward size={21} />
+                        </motion.div>
                     </p>
                     {isDiscoverOpen && (
                         <NavbarDiscover />
                     )}
                     <p onClick={toggleImpact} className="flex items-center justify-between w-full cursor-pointer mt-4" >
-                        Impact {isImpactOpen ? <IoIosArrowDown size={21} /> : <IoIosArrowForward size={21} />}
+                        Impact
+                        <motion.div
+                            animate={{ rotate: isImpactOpen ? 90 : 0 }}
+                            transition={{ duration: 0.2, ease: "easeInOut" }}
+                        >
+                            <IoIosArrowForward size={21} />
+                        </motion.div>
                     </p>
                     {isImpactOpen && (
                         <NavbarImpact />

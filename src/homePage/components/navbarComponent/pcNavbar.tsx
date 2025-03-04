@@ -1,4 +1,5 @@
-import { IoIosArrowDown, IoIosArrowForward } from 'react-icons/io';
+import { IoIosArrowForward } from 'react-icons/io';
+import { motion } from 'framer-motion';
 import CokeCompanyLogo from '../../../assets/cokeCompanyLogo.svg';
 import { Tooltip, Listbox, ListboxItem } from "@heroui/react";
 import discoverData from "../../../config/data/discoverData.ts";
@@ -11,7 +12,7 @@ export default function PcNavbar() {
     const [isImpactOpen, setIsImpactOpen] = useState(false);
 
     return (
-        <nav className='hidden lg:block '>
+        <nav className='hidden lg:block'>
             <div className="h-[80px] flex items-center gap-12 font-bold text-md mx-60">
                 <a href={import.meta.env.VITE_LINK_PORTFOLIO} target="_blank">
                     <img src={CokeCompanyLogo} alt="Coke Company Logo" className='items-center' />
@@ -34,7 +35,13 @@ export default function PcNavbar() {
                         onMouseEnter={() => setIsDiscoverOpen(true)}
                         onMouseLeave={() => setIsDiscoverOpen(false)}
                     >
-                        Discover {isDiscoverOpen ? <IoIosArrowDown size={15} /> : <IoIosArrowForward size={15} />}
+                        Discover
+                        <motion.div
+                            animate={{ rotate: isDiscoverOpen ? 90 : 0 }}
+                            transition={{ duration: 0.2, ease: "easeInOut" }}
+                        >
+                            <IoIosArrowForward size={15} />
+                        </motion.div>
                     </p>
                 </Tooltip>
 
@@ -53,7 +60,13 @@ export default function PcNavbar() {
                         onMouseEnter={() => setIsImpactOpen(true)}
                         onMouseLeave={() => setIsImpactOpen(false)}
                     >
-                        Impact {isImpactOpen ? <IoIosArrowDown size={15} /> : <IoIosArrowForward size={15} />}
+                        Impact
+                        <motion.div
+                            animate={{ rotate: isImpactOpen ? 90 : 0 }}
+                            transition={{ duration: 0.2, ease: "easeInOut" }}
+                        >
+                            <IoIosArrowForward size={15} />
+                        </motion.div>
                     </p>
                 </Tooltip>
 
