@@ -37,8 +37,8 @@ Feel free to explore the code and provide feedback! 😊
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/CocaCola-Clone.git
-   cd CocaCola-Clone
+   git clone https://github.com/MaryanneKaffer/coca-cola-clone.git
+   cd cocacolasite
    ```
 
 2. **Install dependencies:**
@@ -60,4 +60,4 @@ Feel free to explore the code and provide feedback! 😊
 
 # 🍹 Experience the Refreshing Clone! 🍹
 
-- coca-cola-clone-delta.vercel.app 
+- https://coca-cola-clone-delta.vercel.app
